@@ -10,12 +10,19 @@ namespace snake
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point();  //  выделение памяти под структуру Point и создание обьекта P1 
-            p1.x = 23;               //  инициализация значений в оъекте P1 значения x 
-            p1.y = 21;               //  инициализация значений в оъекте P1 значения y 
-                                     //  инициализация значения sym, Происходит по умолчанию в классе Point 
-            p1.Draw(p1.x,p1.y);     //  вызов метода Draw класса Point
-            Console.ReadLine();     //  заглушка 
+            Point p1 = new Point(23,3,'!');  // конструктор 2  объект p1
+            p1.Draw();
+
+            Point test = new Point();        // конструктор 1  обьект test
+            test.x = 1;
+            test.y = 4;
+            test.sym = 'a';
+            test.Draw();
+
+            Point p2 = new Point(12, 12);    //конструктор 2 оъект p2
+            p2.Draw();
+
+            Console.ReadLine();     
         }
       
     }

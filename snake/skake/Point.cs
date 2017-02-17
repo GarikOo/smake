@@ -12,10 +12,21 @@ namespace snake
        public int y;
        public char sym;
 
-        public void Draw( int x = 0, int y = 0, char sym = '@' )        //метод класса Point (+ значения по умолчанию)
+        public Point()                  //конструктор 1
         {
-            Console.SetCursorPosition(x, y);                            // установка курсора на значение координат
-            Console.Write(sym);                                         //вывод символа Sym 
+        }
+        
+        public Point( int point_x, int point_y, char sym_char = '@')         //кончтруктор 2
+        {
+            x = point_x;
+            y = point_y;
+            sym = sym_char;
+        }
+                
+        public void Draw()        
+        {
+            Console.SetCursorPosition(x, y);                           
+            Console.Write(sym);                                         
         }
     }
 }
