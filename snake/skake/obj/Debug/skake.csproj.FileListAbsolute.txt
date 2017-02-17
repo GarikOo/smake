@@ -4,3 +4,9 @@ C:\Users\Kate\Desktop\snake\snake\skake\bin\Debug\skake.pdb
 C:\Users\Kate\Desktop\snake\snake\skake\obj\Debug\skake.csprojResolveAssemblyReference.cache
 C:\Users\Kate\Desktop\snake\snake\skake\obj\Debug\skake.exe
 C:\Users\Kate\Desktop\snake\snake\skake\obj\Debug\skake.pdb
+C:\Users\Kate\Desktop\snake\smake\snake\skake\bin\Debug\snake.exe.config
+C:\Users\Kate\Desktop\snake\smake\snake\skake\bin\Debug\snake.exe
+C:\Users\Kate\Desktop\snake\smake\snake\skake\bin\Debug\snake.pdb
+C:\Users\Kate\Desktop\snake\smake\snake\skake\obj\Debug\skake.csprojResolveAssemblyReference.cache
+C:\Users\Kate\Desktop\snake\smake\snake\skake\obj\Debug\snake.exe
+C:\Users\Kate\Desktop\snake\smake\snake\skake\obj\Debug\snake.pdb
