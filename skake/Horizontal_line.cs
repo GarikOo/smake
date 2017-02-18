@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace snake
 {
-    class Horizontal_line
+    class Horizontal_line   : Figure
     {
-        List<Point> listPoint;
-    public Horizontal_line(int xLeft, int xRight,int y, char sym ='@') {
+        
+    public Horizontal_line(int xLeft, int xRight,int y, char sym ='@')
+        {
             listPoint = new List<Point>();                                    //создаем лист list_POint в котором хранятся обьекты класса Point 
             for (int x = xLeft;  x <= xRight; x++)                            //пробегаем циклом с заданого xLeft по xRight с y-овой координаты
             {
@@ -18,22 +19,5 @@ namespace snake
             }
             
         }
-
-        public void Draw_line()                                                // проресовка линии через метода Draw в классе Point
-        {
-            for (int i = 0; i < listPoint.Count; i++)
-            {
-                listPoint[i].Draw();
-            }
-            //если не сработает то херани то что  в коментах
-            /*
-             * foreach(Poin p in listPoint)
-             * {
-             *  p.draw
-             * }
-             */
-
-        }
-
     }
 }

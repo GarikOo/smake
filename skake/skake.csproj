@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Snake_drow.cs" />
+    <Compile Include="Directoin.cs" />
+    <Compile Include="Figure.cs" />
     <Compile Include="Horizontal_line.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
