@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="food_generatior.cs" />
-    <Compile Include="Snake_drow.cs" />
+    <Compile Include="Snake_draw.cs" />
     <Compile Include="Directoin.cs" />
     <Compile Include="Figure.cs" />
     <Compile Include="Horizontal_line.cs" />

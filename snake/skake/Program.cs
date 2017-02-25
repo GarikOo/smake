@@ -16,11 +16,11 @@ namespace snake
 
 
 
-            Wall walls = new Wall(80, 25);
+            Wall walls = new Wall(20, 15);
             walls.Draw();
 
             Point p = new Point(3, 3, 'a');
-            Snake_drow snake = new Snake_drow(p, 4, Directoin.up);
+            Snake_draw snake = new Snake_draw(p, 9, Directoin.up);
             snake.Draw_line();
 
             food_generatior food_creator = new food_generatior(20, 20, '%');
@@ -29,7 +29,7 @@ namespace snake
             
             while (true)
             {
-                if (snake.Eat(food))
+                if (snake.Eat(food) )
                 {   
 
                     food = food_creator.Createfood();
@@ -37,6 +37,10 @@ namespace snake
                 }
                 else
                 {
+                    if (walls.IsHit(snake.head()))
+                        {
+                        return;
+                        }
                     snake.Move();
                 }
                 Thread.Sleep(100);

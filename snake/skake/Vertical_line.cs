@@ -11,11 +11,11 @@ namespace snake
         
         public Vertical_line(int yUp, int yDown, int x, char sym = '@')
         {
-            listPoint = new List<Point>();                                      //создаем лист list_POint в котором хранятся обьекты класса Point 
+            pointList = new List<Point>();                                      //создаем лист list_POint в котором хранятся обьекты класса Point 
             for (int y = yUp; y <= yDown; y++)                                  //пробегаем циклом с заданого yUp по yDown с x-овой координаты
             {
                 Point p = new Point(x, y, sym);                                // создаем обьект p класса Point  с передачей значений x,yUp,sym
-                listPoint.Add(p);
+                pointList.Add(p);
             }
 
         }

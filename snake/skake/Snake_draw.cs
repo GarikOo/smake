@@ -6,29 +6,35 @@ using System.Threading.Tasks;
 
 namespace snake
 {
-    class Snake_drow : Figure
+    class Snake_draw : Figure
     {
          Directoin  direction;
-        public Snake_drow(Point tail, int lenght, Directoin _direction)                      // класс(часный случай фигуры) с методом 
+        public Snake_draw(Point tail, int lenght, Directoin _direction)                      // класс(часный случай фигуры) с методом 
         {
             direction = _direction;
-            listPoint = new List<Point>();
+            pointList = new List<Point>();
             for (int i = 0; i < lenght; i++)
             {
                 Point p = new Point(tail);
                 p.move(i, direction);
-                listPoint.Add(p);
+                pointList.Add(p);
             }
         }
         internal void Move()                                                              // метод движения змейки на 1 в сторону direction
         {
-            Point tail = listPoint.First();                                               // метод first - первый элемент списка
-            listPoint.Remove(tail);                                                       //удаляем обьект tail из списка
+            Point tail = pointList.First();                                               // метод first - первый элемент списка
+            pointList.Remove(tail);                                                       //удаляем обьект tail из списка
             Point Head = GenNextPoint();                                                   // пользуемся методом genNextPoint который возращает обьект класса Point
-            listPoint.Add(Head);
+            pointList.Add(Head);
             tail.Clear();
             Head.Draw();
         }
+
+        public Point head() {
+            return GenNextPoint();
+           
+        }
+
         public void ArrowKey(ConsoleKey key)                                                // обрабатывает нажатие стрелок и переносит в direction
         {
             if (key == ConsoleKey.LeftArrow)
@@ -42,7 +48,7 @@ namespace snake
         }
         public Point GenNextPoint()
         {
-            Point head = listPoint.Last();                                                     // брем последнюю точку из списка listPoint
+            Point head = pointList.Last();                                                     // брем последнюю точку из списка listPoint
             Point nextPoint = new Point(head);                                                 //создаем обьект nextPoint класса point
             nextPoint.move(1, direction);                                                      //используем метод move из класса point для обьекта nextPoint
             return nextPoint;                                                                  // возращаем точку 
@@ -54,7 +60,7 @@ namespace snake
             if (head.IsHit(food))
             {
                 food.sym = head.sym;
-                listPoint.Add(food);
+                pointList.Add(food);
                 return true;
             }
             else
