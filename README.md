@@ -1,1 +1,1 @@
-# smake
+# smake + Hi!
